@@ -31,6 +31,6 @@ class newdestination(models.Model):
         return self
 
 class Cost(models.Model):
-    from_location = models.CharField(max_length=255)
-    to_location = models.CharField(max_length=255)
+    from_location = models.CharField(max_length=255, default='')
+    to_location = models.CharField(max_length=255, default='')
     price = models.IntegerField()
