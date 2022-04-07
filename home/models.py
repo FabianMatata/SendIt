@@ -1,7 +1,10 @@
+from atexit import register
+from pyexpat import model
 from django.db import models
+from django.contrib.auth.models import User
 
 class Customer(models.Model):
-    # id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     LOCATION_CHOICES = (('Nairobi', 'Nairobi'), ('Mombasa', 'Mombasa'), ('Kisumu', 'Kisumu'), ('Embu', 'Embu'), ('Nakuru', 'Nakuru'))
     pickup_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
     destination_location = models.CharField(max_length=100, choices=LOCATION_CHOICES)
@@ -27,26 +30,7 @@ class newdestination(models.Model):
     def __str_(self):
         return self
 
-
-class Order(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-
-class Product(models.Model):
-
-    PACKAGE_CHOICES = (('Small', 'Small'),('Large', 'Large'))
-
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    prodName = models.CharField(max_length=255, choices=PACKAGE_CHOICES)
-
-
-# Customer
-# Order
-# Destination
-# SingleOrder
-# Cost 
-
-
-# Customer -->  Order
-# Order -- > Destination
-# Customer --> Destination 
-# Cost -- > Destination 
+class Cost(models.Model):
+    from_location = models.CharField(max_length=255)
+    to_location = models.CharField(max_length=255)
+    price = models.IntegerField()
