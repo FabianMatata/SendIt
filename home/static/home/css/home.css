@@ -156,14 +156,18 @@
 
 /* ORDER DETAILS  */
 
+tr {
+    cursor: pointer;
+}
+
 tr .th-tle {
     background-color: #ec8246;
     color: #fff;
-    padding: .6rem .2;
+    padding: .6rem .2rem;
     font-weight: 400;
 }
 
 tr .td-dt {
-    padding: .6rem 0;
     font-size: 1rem;
+    padding: .6rem 0;
 }
