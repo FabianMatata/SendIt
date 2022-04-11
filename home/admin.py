@@ -1,7 +1,9 @@
 from django.contrib import admin
-from .models import Customer, Sender, newdestination
+
+# from home.views import order
+from .models import *
 # Register your models here.
 
-admin.site.register(Customer)
-admin.site.register(Sender)
-admin.site.register(newdestination)
+admin.site.register(Place_Order)
+admin.site.register(TransportCost)
+admin.site.register(UserProfile)
