@@ -107,3 +107,21 @@
 .faqs {
     margin-bottom: 4rem;
 }
+
+.get-started {
+    border: none;
+    padding: .6rem 4rem;
+    color: #ec8246;
+    background-color: #fff;
+    margin: 2rem 0;
+}
+
+.get-started a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #ec8246;
+}
+
+
+/* FOOTER  */
