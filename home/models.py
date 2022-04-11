@@ -38,7 +38,7 @@ class UserProfile(models.Model):
     last_name = models.CharField(max_length=255)
     adress = models.CharField(max_length=100) #user street adress
     email = models.EmailField('User Email') #location of the user
-    user_image = models.ImageField(upload_to='userproc') #user image optional
+    user_image = models.ImageField(upload_to='media') #user image optional
 
     class Meta:
         db_table = 'UserProfile'
