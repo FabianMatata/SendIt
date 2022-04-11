@@ -7,7 +7,7 @@ def index(request):
 # get Order details 
 def order_details(request):
     orders = Place_Order.objects.all()
-    return render(request,'order/order_details.html', {'orders':orders})
+    return render(request,'home/details.html', {'orders':orders})
 
 def order(request):
     return render(request, 'order/order.html')

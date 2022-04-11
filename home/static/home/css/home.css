@@ -152,3 +152,18 @@
     overflow-anchor: none;
     /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease; */
 }
+
+
+/* ORDER DETAILS  */
+
+tr .th-tle {
+    background-color: #ec8246;
+    color: #fff;
+    padding: .6rem .2;
+    font-weight: 400;
+}
+
+tr .td-dt {
+    padding: .6rem 0;
+    font-size: 1rem;
+}

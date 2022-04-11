@@ -28,7 +28,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Order</a>
+                            <a class="nav-link" href="{% url 'order_details' %}">My Order</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Profile</a>

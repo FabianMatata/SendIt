@@ -3,16 +3,36 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
-            <h3>view parcel details</h3>
-            <h1>details</h1>
-            {% for detail in details%}
-            <p>Pick-Up : {{detail.pickup_location}}</p>
-            <p>Destination : {{detail.destination_location}}</p>
-            {% endfor %}
+        <div class="col-md-12">
+            <h1 class="h-tle">My Orders</h1>
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr>
+                        <th class="th-tle">OrderID</th>
+                        <th class="th-tle">Item_Name</th>
+                        <th class="th-tle">From</th>
+                        <th class="th-tle">To</th>
+                        <th class="th-tle">Receipient Contact</th>
+                        <th class="th-tle">Collected On</th>
+                        <th class="th-tle">Status</th>
+                        <th class="th-tle">Amount</th>
+                    </tr>
+                    {% for order in orders %}
+                    <tr>
+                        <td class="td-dt">{{order.id}}</td>
+                        <td class="td-dt">{{order.item_name}}</td>
+                        <td class="td-dt">{{order.from_location}}</td>
+                        <td class="td-dt">{{order.to_location}}</td>
+                        <td class="td-dt">{{order.collect_by_user}}</td>
+                        <td class="td-dt">{{order.collect_at}}</td>
+                        <td class="td-dt">{{order.order_status}}</td>
+                        <td class="td-dt">{{order.transportation_cost.price}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </div>
-    <button type="button "><a href="/changedestination/ ">change parcel destination</a></button>
 </div>
 <!-- end block  -->
 {% endblock content %}
