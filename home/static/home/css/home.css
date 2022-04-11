@@ -123,5 +123,32 @@
     color: #ec8246;
 }
 
+.accordion-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
 
-/* FOOTER  */
+.accordion-button:not(.collapsed) {
+    color: #ec8246;
+    border-bottom: 1px solid #eee;
+    background-color: none !important;
+    /* background-color: #e7f1ff; */
+    /* box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%); */
+}
+
+.accordion-button {
+    background-color: none !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    /* color: #212529; */
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    /* transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease; */
+}
