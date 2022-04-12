@@ -18,7 +18,7 @@ class Place_Order(models.Model):
     item_name = models.CharField(max_length=200) #item name
     from_location = models.CharField(max_length=100) #location from which item is picked
     to_location = models.CharField(max_length=100) #location to which item is going
-    collect_by_user = models.IntegerField() #person who colllee ts item
+    collect_by_user = models.CharField(max_length=255) #person who colllee ts item
     # collect_by_userid = models.IntegerField() #id of user who collects item
     placed_at = models.DateField(auto_now=True) #date when item was shipped
     collect_at = models.DateField(auto_now=True) #date which item should be picked
@@ -45,3 +45,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
+
+
+
+

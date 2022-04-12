@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k7h5&$0(=g!c)w0t0x^q&6dio&)oq@g4-2ur3zyo0co1_ksj(f
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+    
 ALLOWED_HOSTS = []
 
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     'crispy_forms',
     'register',
+    # 'role',
 ]
 
 MIDDLEWARE = [
@@ -126,9 +127,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 CRISPY_TEMPLATE_PACK="bootstrap4"
 
+
 # redirect to Order Page 
-LOGIN_REDIRECT_URL="/"
-LOGOUT_REDIRECT_URL="/delivery"
+# LOGIN_REDIRECT_URL="/"
+# LOGOUT_REDIRECT_URL="/delivery"
 
 
 # Default primary key field type

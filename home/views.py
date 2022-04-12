@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
 from .models import *
 
 def index(request):
@@ -15,3 +16,5 @@ def order(request):
 def profile(request):
     user_info = User.objects.all()
     return render(request, 'order/profile.html', {'user_info':user_info})
+
+
