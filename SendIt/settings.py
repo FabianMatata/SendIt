@@ -14,7 +14,6 @@ import os
 from pathlib import Path
 from django.conf import settings
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -125,9 +124,10 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-CRISPY_TEMPLATE_PACK="bootstrap4"
+CRISPY_TEMPLATE_PACK="bootstrap4" #style forms 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # redirect to homePage --> text 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/' #redirect onLogged in
+LOGIN_URL = 'login' #Login decorator

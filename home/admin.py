@@ -6,4 +6,4 @@ from .models import *
 
 admin.site.register(Place_Order)
 admin.site.register(TransportCost)
-admin.site.register(UserProfile)
+# admin.site.register(UserProfile)
