@@ -4,9 +4,9 @@ from register import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    # path('register', v.register, name='register'),
     path('', include("django.contrib.auth.urls")),
-    path('register', include('register.urls')),
-    # path('role', include('role.urls')),
+
+    path('', include('home.urls')),
+    path('register', v.register,name='register'),
+
 ]
