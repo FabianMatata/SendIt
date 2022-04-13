@@ -1,1 +1,14 @@
-{{user.username}}
+{% extends 'base.html' %}{% load static %} {% load crispy_forms_tags %}
+<!-- main content  -->
+{% block content %}
+<div class="container">
+    <div class="profile-sec">
+        <img src="{{user.profile.user_image.url}}" class="user_img" alt="">
+    </div>
+    <div class="main-sec">
+        <h2 class="ac_name">{{user.username}}</h2>
+        <p class="ac_em">{{user.email}}</p>
+        <small class="ac_cont">{{user.contact}}</small>
+    </div>
+</div>
+{% endblock content %}

@@ -19,3 +19,6 @@ def register(request):
 def login(request):
     pass
 
+
+def profile(request):
+    return render(request, 'register/profile.html')
