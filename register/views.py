@@ -1,17 +1,18 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-# from .forms import *
+from .forms import *
 
 # @TODO: Create register View
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = RegForm(request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'{username}, Please logIn!')
             return redirect('index')
     else :
-        form = UserCreationForm()
+        form = RegForm()
     return render(request, 'register/register.html', {'form': form})
