@@ -12,7 +12,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=255)
     adress = models.CharField(max_length=100) #user street adress
     email = models.EmailField('User Email') #location of the user
-    user_image = models.ImageField(upload_to='media', default='default.jpg') #user image optional
+    user_image = models.ImageField(upload_to='profile_pics', default='default.jpg') #user image optional
 
     # class Meta:
     #     db_table = 'UserProfile'
