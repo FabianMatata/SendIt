@@ -2,15 +2,22 @@
 <!-- main content  -->
 {% block content %}
 <div class="container">
-    <h1>register</h1>
-    <br>
-    <hr>
-    <form action="{% url 'register' %}" method="POST">
-        {{form|crispy}}
-        <!-- edit forms   -->
-        {% csrf_token %}
-        <p class="muted">Already a User? <a href="{% url 'login' %}">Login</a></p>
-        <button type="submit" class="btn btn-outline-info">Create Account</button>
-    </form>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="reg-data">
+                <h1>Register</h1>
+                <br>
+                <hr>
+                <form action="{% url 'register' %}" method="POST">
+                    {{form|crispy}}
+                    <!-- edit forms   -->
+                    {% csrf_token %}
+                    <p class="muted">Already a User? <a href="{% url 'login' %}">Login</a></p>
+                    <button type="submit" class="btn btn-outline-info">Create Account</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
 </div>
 {% endblock content %}

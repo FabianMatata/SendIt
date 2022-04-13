@@ -12,9 +12,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+from django.conf import settings
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,7 +45,6 @@ INSTALLED_APPS = [
     'home',
     'crispy_forms',
     'register',
-    # 'role',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +128,6 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK="bootstrap4"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# redirect to homePage --> text 
+LOGIN_REDIRECT_URL = '/'
