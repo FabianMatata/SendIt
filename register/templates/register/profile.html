@@ -8,7 +8,8 @@
     <div class="main-sec">
         <h2 class="ac_name">{{user.username}}</h2>
         <p class="ac_em">{{user.email}}</p>
-        <small class="ac_cont">{{user.contact}}</small>
+        <small class="ac_cont">{{user.proile.contact}}</small>
+        <p>{{user.first_name}} {{user.profile.last_name}}</p>
     </div>
 </div>
 {% endblock content %}
