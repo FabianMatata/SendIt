@@ -14,3 +14,20 @@
     height: 10rem;
     /* padding: 2rem 0; */
 }
+
+button .btn-submit {
+    padding: .6rem 4rem;
+    border: none;
+    background-color: #ec8246;
+    color: #fff;
+    letter-spacing: .1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 2rem 0;
+}
+
+.ac-name {
+    letter-spacing: .1rem;
+    font-weight: 400;
+    font-size: 2.3rem;
+}
