@@ -135,3 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # redirect to homePage --> text 
 LOGIN_REDIRECT_URL = 'place_order/' #redirect onLogged in
 LOGIN_URL = 'login' #Login decorator
+LOGOUT_REDIRECT_URL = '/' #redirect onLogged in
+

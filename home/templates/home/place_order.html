@@ -1,5 +1,30 @@
 {% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
 <!-- code block  -->
 {% block content %}
-<p>Welcome, {{user.username}}</p>
+<div class="container">
+    <h5>Welcome, {{user.username}}</h5>
+    <h3>Parcel Order Form</h3>
+    <p>need to deliver a parcel, fill in the form below</p>
+    <hr>
+
+    <div>
+        <form action="" method="post">
+            {% csrf_token %} {{ form|crispy }}
+            <br>
+            <button class="btn-submit" type="submit">Place Order</button>
+            <!-- <button id="myBtn" type="submit" class="btn btn-success" onclick="submitForm()">Order Parcel</button> -->
+        </form>
+
+        <!--modal start-->
+        <!-- The Modal -->
+        <!-- <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Order placed successfully!</p>
+            </div>
+        </div> -->
+        <!--modal end-->
+        <!-- <a href="{% url 'order_details' %}">Order details</a> -->
+    </div>
+</div>
 {% endblock content %}
